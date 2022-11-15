@@ -1,0 +1,14 @@
+CREATE TABLE Users (
+  id INTEGER PRIMARY KEY,
+  firstName VARCHAR(45), 
+  lastName VARCHAR(45),
+  email VARCHAR(75) NOT NULL, 
+  password VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE Posts (
+  id INTEGER PRIMARY KEY,
+  text TEXT NOT NULL, 
+  author INTEGER NOT NULL,
+  FOREIGN KEY (author) REFERENCES Users(id)
+);
