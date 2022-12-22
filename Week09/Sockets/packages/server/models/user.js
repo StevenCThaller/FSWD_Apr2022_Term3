@@ -23,7 +23,8 @@ const userSchema = new Schema({
       type: ObjectId,
       ref: 'ChatRoom'
     }
-  ]
+  ],
+  activeSocket: String
 }, { timestamp: true })
 
 const User = model('User', userSchema)

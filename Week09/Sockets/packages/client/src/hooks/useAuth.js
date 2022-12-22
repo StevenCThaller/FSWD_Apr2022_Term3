@@ -94,7 +94,7 @@ const useAuth = () => {
   useEffect(() => {
     if (!auth.isAuthenticated) {
       const localUser = JSON.parse(localStorage.getItem('loggedInUser'))
-      console.log(localUser)
+
       if (localUser) {
         dispatch({
           type: "LOGIN",

@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import requireAuth from '../middleware/requireAuth';
-import User from '../models/user';
+import ChatRoom from '../models/chatRoom';
 
 const chatRoomsRoutes = Router();
 
@@ -10,18 +10,11 @@ chatRoomsRoutes.get('/', requireAuth, async (req, res, next) => {
 
     console.log(req.user)
 
-    const user = await User.findById(id)
-      .populate({
-        path: 'chatRooms',
-        populate: {
-          path: 'members',
-          model: 'User'
-        }
-      })
+    const rooms = await ChatRoom.find({ members: id })
+      .populate('members')
 
-    console.log(user)
 
-    res.json(user.chatRooms)
+    res.json(rooms)
 
   } catch (error) {
     console.log(error)

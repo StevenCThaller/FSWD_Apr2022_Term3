@@ -13,7 +13,10 @@ const Header = () => {
         <Nav>
           {
             isAuthenticated ?
-              <Nav.Link as={Link} to="/dashboard">My Chats</Nav.Link>
+              <>
+                <Nav.Link as={Link} to="/dashboard/friendsearch">Find Friends</Nav.Link>
+                <Nav.Link as={Link} to="/dashboard/chat">My Chats</Nav.Link>
+              </>
               :
               <Nav.Link as={Link} to="/signin">Sign In</Nav.Link>
           }

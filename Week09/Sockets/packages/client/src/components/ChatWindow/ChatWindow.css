@@ -1,0 +1,41 @@
+.chat-log {
+  position: relative;
+  overflow-y: scroll;
+  max-height: 450px;
+  width: 100%;
+  bottom: 0;
+}
+
+.message {
+  display: flex;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.bubble {
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 10pt;
+  max-width: 100px;
+}
+
+.sent {
+  justify-content: flex-end;
+}
+
+.sent .bubble {
+  background-color: gray;
+}
+
+.received {
+  justify-content: flex-start;
+}
+
+.received .bubble {
+  background-color: blue;
+  color: white;
+}
+
+.from {
+  font-size: 8pt;
+}

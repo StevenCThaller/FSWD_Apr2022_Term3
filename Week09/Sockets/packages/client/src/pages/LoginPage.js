@@ -42,6 +42,7 @@ const LoginPage = () => {
           <Form.Label>Username</Form.Label>
           <Form.Control
             type="text"
+            autoComplete="off"
             name="username"
             value={data.username}
             onChange={handleChange} />
@@ -50,6 +51,7 @@ const LoginPage = () => {
           <Form.Label>Password</Form.Label>
           <Form.Control
             type="password"
+            autoComplete="off"
             name="password"
             value={data.password}
             onChange={handleChange} />

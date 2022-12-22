@@ -1,0 +1,19 @@
+.chatList {
+  border-right: 1px solid gray;
+  box-shadow: 10px 0 5px -5px #888;
+  height: 100%;
+  overflow-y: auto;
+  position: relative;
+}
+
+.chatList .collapsed {
+}
+.chatList.expanded {
+  width: 200px;
+}
+
+.addChat {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
