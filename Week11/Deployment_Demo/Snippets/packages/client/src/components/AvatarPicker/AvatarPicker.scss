@@ -1,0 +1,19 @@
+.avatar-picker {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 300px;
+  gap: 20px;
+  margin: 0 auto;
+}
+
+.selectable-avatar {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+
+.selected {
+  outline: 3px solid goldenrod;
+  border-radius: 10px;
+}
